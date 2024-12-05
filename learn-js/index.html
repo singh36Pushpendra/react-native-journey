@@ -68,9 +68,116 @@
     <p id="stringsLiteral"></p>
     <p id="varValue"></p>
     <p id="diffName"></p>
+
+    <p id="myP"></p>
+    <h3 id="myH"></h3>
+    <h2 id="forVar"></h2>
+    <h2 id="forLet"></h2>
+    <h2 id="forConst"></h2>
+    <h3 id="forLetAndConst"></h3>
+    <h4 id="piId"></h4>
+    <h4 id="personId"></h4>
+    <h4 id="answerId"></h4>
+    <h2 id="carNameId"></h2>
+    <h2 id="carName2Id"></h2>
+    <h2 id="carName3Id"></h2>
+    <h4 id="a1Id"></h4>
+    <h4 id="stringId"></h4>
+    <h4 id="a2Id"></h4>
+    <h4 id="a3Id"></h4>
+    <h4 id="1$Id"></h4>
+    <h4 id="3$Id"></h4>
+    <h4 id="$myMoneyId"></h4>
+    <h4 id="_lastNameId"></h4>
+    <h4 id="_xId"></h4>
+    <h4 id="100"></h4>
     <script>
-      let m, n;
-      m = 5;
+      let _lastName = "Johnson";
+      let _x = 2;
+      let _100 = 5;
+      document.getElementById("_lastNameId").innerHTML = _lastName;
+      document.getElementById("_xId").innerHTML = _x;
+      document.getElementById("100").innerHTML = _100;
+
+      let $myMoney = 5;
+      document.getElementById("$myMoneyId").innerHTML = $myMoney;
+
+      let $ = "Hello World";
+      document.getElementById("1$Id").innerHTML = $;
+
+      let $$$ = 2;
+      document.getElementById("3$Id").innerHTML = $$$;
+
+      let a3 = 5 + 2 + "3";
+      document.getElementById("a3Id").innerHTML = a3;
+
+      let a2 = "5" + 2 + 3;
+      document.getElementById("a2Id").innerHTML = a2;
+
+      let concatStrings = "Pushpendra" + " " + "Singh";
+      document.getElementById("stringId").innerHTML = concatStrings;
+
+      let a1 = 5 + 2 + 3;
+      document.getElementById("a1Id").innerHTML = a1;
+
+      var carName3 = "Tesla";
+      var carName3;
+      document.getElementById("carName3Id").innerHTML = carName3;
+
+      let carName2;
+      document.getElementById("carName2Id").innerHTML = carName2;
+
+      // It's a good programming practice to declare all variables at the beginning of a script.
+      let person = "pushpa",
+        carName = "Volvo",
+        price = 200;
+      document.getElementById("carNameId").innerHTML = carName;
+
+      const $pi = 3.14;
+      let _person = "Piku Darbar";
+      let _answer = "Yes I am!";
+      document.getElementById("piId").innerHTML = $pi;
+      document.getElementById("personId").innerHTML = _person;
+      document.getElementById("answerId").innerHTML = _answer;
+
+      const price1 = 5;
+      const price2 = 6;
+      let total = price1 + price2;
+      document.getElementById("forLetAndConst").innerHTML =
+        "The total of prices is = " + total;
+
+      const x4 = 5555;
+      const y4 = 6666;
+      z4 = x4 + y4;
+      document.getElementById("forConst").innerHTML =
+        "The value of z4 is " + z4;
+
+      let x3 = 555;
+      let y3 = 666;
+      z3 = x3 + y3;
+      document.getElementById("forLet").innerHTML = "The value of z3 is " + z3;
+
+      var x2 = 55;
+      var y2 = 66;
+      z2 = x2 + y2;
+      document.getElementById("forVar").innerHTML = "The value of z2 is " + z2;
+
+      x1 = 5;
+      y1 = 6;
+      z1 = x1 + y1;
+      document.getElementById("myH").innerHTML = "The value of z1 is " + z1;
+
+      /* 
+      The code below will change
+      the heading with id = "myH"
+      and the paragraph with id = "myP"
+      in my web page:
+       */
+      // document.getElementById("myH").innerHTML = "This is the heading change";
+      document.getElementById("myP").innerHTML = "This is the paragraph change";
+
+      let m, n; // Declare m, n
+      m = 5; // Initialize m, give it a value 5
       n = 7;
       document.getElementById("varValue").innerHTML = (n + m) * 10;
 
@@ -88,12 +195,12 @@
       let o = 5; // I will be executed
 
       // x = 6;   I will NOT be executed
-
+      /* 
       let lastname, lastName;
       lastName = "Doe";
       lastname = "Peterson";
       document.getElementById("diffName").innerHTML = lastName + " " + lastname;
-
+ */
       // If a JavaScript statement does not fit on one line, the best place to break it is after an operator
       document.getElementById("jsStatements").innerHTML =
         "The value of z is " + z + ".";
